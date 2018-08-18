@@ -1,7 +1,8 @@
 # Program for day 5
 
 The program is written in Applesoft BASIC inside the linapple emulator. It is
-in the Applesoft BASIC compact format.
+included here in Applesoft packed format (day5) and expanded ASCII format
+(day5.bas)
 
 ## Running
 
