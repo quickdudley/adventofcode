@@ -1,3 +1,6 @@
+# RISC-V assembler
+# Linux syscall numbers from https://rv8.io/syscalls.html
+# Syscall arguments from https://syscalls.kernelgrok.com/
 .section .text
 .globl _start
 _start:
