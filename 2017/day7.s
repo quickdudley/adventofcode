@@ -1,5 +1,5 @@
 # RISC-V assembler
-# Linux syscall numbers from https://rv8.io/syscalls.html
+# Linux syscall numbers from https://git.qemu.org/?p=qemu.git;a=blob;f=linux-user/riscv/syscall_nr.h;h=7e30f1f1ef48ddbb1620d2772df7df3c9e0ae200;hb=refs/heads/master
 # Syscall arguments from https://syscalls.kernelgrok.com/
 .section .text
 .globl _start
