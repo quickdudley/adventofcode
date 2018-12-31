@@ -1,6 +1,14 @@
 # RISC-V assembler
 # Linux syscall numbers from https://git.qemu.org/?p=qemu.git;a=blob;f=linux-user/riscv/syscall_nr.h;h=7e30f1f1ef48ddbb1620d2772df7df3c9e0ae200;hb=refs/heads/master
 # Syscall arguments from https://syscalls.kernelgrok.com/
+
+# Register usage:
+# s2: data fd
+# s3: number of bytes read
+# s4: number of bytes parsed
+# s5: jump destination for parsing next character
+# s6: character
+# s7: pointer to tree node
 .section .text
 .globl _start
 _start:
@@ -24,11 +32,13 @@ readloop:
   ecall
 
   bge zero, a0, on_eof
+  addi s3, a0, 0 # s3: number of bytes read
+  addi s4, zero, 0 # s4: number of bytes parsed
   # TODO parse the buffer
   j readloop
 
-  # Close input data file
 on_eof:
+  # Close input data file
   addi a0, s2, 0
   li a7, 57
   ecall
