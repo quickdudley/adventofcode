@@ -67,7 +67,7 @@ impl<I: Iterator> Iterator for Pairwise<I>
       }).or_else(|| {
         self.last = None;
         None
-      })   
+      })
     )
   }
 }
