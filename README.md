@@ -1,6 +1,9 @@
 # adventofcode
 My solutions to the advent of code puzzles: http://adventofcode.com
 
+This repository has migrated to [Pijul nest](https://nest.pijul.com/quickdudley/adventofcode):
+additional solutions might eventually be mirrored here.
+
 ## Additional notes
 
 1. I have no intention of doing these every day until finished.
